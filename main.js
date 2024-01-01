@@ -47,7 +47,7 @@ phoneNumber.addEventListener("focusout", () => {
         setErrorMessage(errorContainer[3], "Invalid phone number.");
     } else {
         phoneNumber.value = phoneNumber.value.replace(/\D/g, '');
-        let formattedNumber = phoneNumber.value.match(/^(\d{3})(\d{3})(\d{5})$/);
+        let formattedNumber = phoneNumber.value.match(/^(\d{3})(\d{3})(\d{4})$/);
         phoneNumber.value = '(' + formattedNumber[1] + ')' + ' ' + formattedNumber[2] + '-' + formattedNumber[3];
     }
 })
